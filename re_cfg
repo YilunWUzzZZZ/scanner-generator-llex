@@ -1,0 +1,46 @@
+|
+&
+*
+(), [], ^
+
+
+
+RE -> TermAterm
+
+Aterm ->  | RE
+          NIL
+
+Term -> FactorAfactor
+
+Afactor -> Term
+           NIL
+
+
+Factor -> ElemAelem
+
+Aelem -> *
+         NIL
+
+
+Elem ->  (RE)
+		 [Set]
+         Symbol
+
+Set -> ^RangeRangelist
+       | RangeRangelist
+
+Rangelist -> RangeRangelist
+             | NIL
+
+Range -> symbolAsymbol
+         | \any
+
+Asymbol -> -symbol
+          | NIL
+
+
+Symbol -> \any
+          symbol
+
+
+
